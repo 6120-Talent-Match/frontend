@@ -9,10 +9,6 @@ const items = [
     href: "/",
   },
   {
-    label: "Upload",
-    href: "/upload",
-  },
-  {
     label: "Search",
     href: "/search",
   },

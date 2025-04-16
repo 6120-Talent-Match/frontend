@@ -15,7 +15,14 @@ A description about the position and requirements about the job.
 
 # Output Format
 
-As an experienced HR, you will summarize the most relevant skills about this position. You will return a JSON object with a list of skills, where each item is a skill.
+As an experienced HR, you will spot and summarize the most relevant skills and probable job positions that the candidates might have been in. You will return a JSON object with a list of skills and job positions, where each item is a skill or job position.
+
+# Example
+
+{
+  "skills": ["skill1", "skill2", "skill3"],
+  "experience": ["experience1", "experience2", "experience3"]
+}
 `;
 
 const parseQuery = async (query: string) => {
@@ -28,6 +35,15 @@ const parseQuery = async (query: string) => {
           {
             "type": "input_text",
             "text": systemPrompt
+          },
+        ]
+      },
+      {
+        "role": "user",
+        "content": [
+          {
+            "type": "input_text",
+            "text": query
           }
         ]
       },
@@ -45,22 +61,31 @@ const parseQuery = async (query: string) => {
               "items": {
                 "type": "string"
               }
+            },
+            "experience": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
             }
           },
           "additionalProperties": false,
           "required": [
-            "skills"
+            "skills",
+            "experience"
           ]
         }
       }
     },
     reasoning: {},
     tools: [],
-    temperature: 1,
+    temperature: 0.9,
     max_output_tokens: 2048,
     top_p: 1,
     store: true
   });
+
+  console.log(response);
 
   return response.output_text;
 };
