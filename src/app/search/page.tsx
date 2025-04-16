@@ -48,6 +48,8 @@ const Search = () => {
   }
 
   return <div className="w-full flex flex-col items-center gap-4">
+    <p className="mt-4 text-2xl font-bold">Talent Search Engine</p>
+    <p className="text-gray-500">Please describe the position or the skills you are looking for</p>
     <div className="w-full flex items-center justify-center gap-4 py-4">
       <input
         type="text"
