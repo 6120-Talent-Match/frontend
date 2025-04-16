@@ -15,9 +15,13 @@ A description about the position and requirements about the job.
 
 # Output Format
 
-As an experienced HR, you will spot and summarize the most relevant skills and probable job positions that the candidates might have been in. You will return a JSON object with a list of skills and job positions, where each item is a skill or job position.
+As an experienced HR, you will spot and summarize the most relevant skills and probable job positions that the candidates might have been in. You will return a JSON object with a list of skills and job positions.
 
-# Example
+You can think of these two approaches:
+* Hierarchical Expansion (e.g., React → JavaScript)
+* Lateral Expansion (e.g., MySQL ↔ PostgreSQL)
+
+## Example
 
 {
   "skills": ["skill1", "skill2", "skill3"],
