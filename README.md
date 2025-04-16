@@ -13,7 +13,6 @@ The site is developed using [Next.js](https://nextjs.org/) and styled with [Tail
 - **Next.js** – React framework for production-grade web apps
 - **Tailwind CSS** – Utility-first CSS framework for rapid UI development
 - **TypeScript** – Static typing for improved developer experience
-- **Axios** – For API calls to the backend service
 
 ---
 
