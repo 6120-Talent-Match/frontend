@@ -10,10 +10,10 @@ const Home = () => {
       <br />
       The frontend is built with <Link href="https://nextjs.org/" className="text-blue-500" target="_blank">Next.js</Link> and <Link href="https://tailwindcss.com/" className="text-blue-500" target="_blank">Tailwind CSS</Link>.
       <br />
-      Please feel free to try it out in the <Link href="/search" className="text-blue-500" target="_blank">search page</Link>.
+      Please feel free to try it out in the <Link href="/search" className="text-blue-500">search page</Link>.
     </p>
     <Link href="https://github.com/6120-Talent-Match" className="text-blue-500" target="_blank">GitHub</Link>
-  </div>;
+  </div >;
 };
 
 export default Home;
